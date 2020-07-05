@@ -1,0 +1,114 @@
+.i,.i1{
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+.i .banner1 .unit-copy-wrapper a{
+	color: #2997ff;
+}
+.banner1{
+	width: 1262px;
+	height: 580px;
+	background-size: 1262px 580px;
+	background-repeat: no-repeat;
+	background-image: url(../img/i1.jpg);
+	background-position: center;
+	background-color: #000;
+	color: #f5f5f7;
+	flex: 1;
+	margin: 44px 12px;
+}
+.subhead{
+	font-size: 21px;
+	line-height: 1.2381;
+	font-weight: 400;
+	letter-spacing: .016em;
+}
+.banner2{
+	width: 1262px;
+	height: 580px;
+	background-size: 1262px 580px;
+	background-repeat: no-repeat;
+	background-image: url(../img/i2.jpg);
+	background-position: center;
+	background-color: #000;
+	color: #f5f5f7;
+	flex: 1;
+	margin: 44px 12px;
+}
+.logo-image {
+    margin: 10px auto;
+}
+.logo-image-wwdc-2020-phase-1-logo{
+	width: 214px;
+	height: 40px;
+	background-size: 214px 40px;
+	background-repeat: no-repeat;
+	background-image: url(../img/logo1.png);
+	background-position: center;
+}
+.logo-image-wwdc-2020-phase-2-logo{
+	width: 214px;
+	height: 40px;
+	background-size: 214px 40px;
+	background-repeat: no-repeat;
+	background-image: url(../img/logo2.png);
+	background-position: center;
+}
+.cta-links{
+	font-size: 17px;
+	line-height: 1.23536;
+	font-weight: 400;
+	letter-spacing: -.022em;
+	margin-top: 20px;
+}
+.banner3 .centerall{
+	color: #1d1d1f;
+	font-size: 40px;
+	line-height: 1.1;
+	font-weight: 600;
+	letter-spacing: 0em;
+}
+.headline{
+	    color: #1d1d1f;
+		font-size: 40px;
+		line-height: 1.1;
+		font-weight: 600;
+		letter-spacing: 0em;
+		margin-top: 52px;
+}
+.banner3{
+	width: 1262px;
+	height: 580px;
+	background-size: 1262px 580px;
+	background-repeat: no-repeat;
+	background-image: url(../img/i3.jpg);
+	background-position: center;
+	background-color: #000;
+	color: #f5f5f7;
+	flex: 1;
+	margin: 44px 12px;
+}
+.banner4{
+	width: 1262px;
+	height: 580px;
+	background-size: 1262px 580px;
+	background-repeat: no-repeat;
+	background-image: url(../img/i4.jpg);
+	background-position: center;
+	background-color: #000;
+	color: #f5f5f7;
+	flex: 1;
+	margin: 44px 12px;
+}
+.unit-copy-wrapper1 .headline{
+	color: #f5f5f7;
+}
+@media only screen and (max-width: 1068px) and (min-width: 768px){
+	.banner1,.banner2{
+	height: 490px;
+	/* columns: 2; */
+	color: #fff;
+	}
+}

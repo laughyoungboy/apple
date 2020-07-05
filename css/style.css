@@ -1,0 +1,201 @@
+/*  
+初始化样式
+符号*，代表所有的样式
+ */
+*{
+	margin: 0;
+	padding: 0;
+}
+.nav{
+	width: 100%;
+	height: 44px;
+	background: rgba(0,0,0,0.8);
+	/* 
+	 r->red
+	 g->green
+	 b->blue
+	 a->(alpha)透明度
+	 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nav a{
+	color: #fff;
+	/* 设置下划线属性：underline(a标签默认样式) */
+	text-decoration: none;
+	width: 102px;
+	text-align: center;
+}
+.nav .logo{
+	background-image: url(../img/loga.svg);
+	height: 44px;
+	/* 设置背景图片不重复 */
+	background-repeat: no-repeat;
+	/* 设置背景图片的位置 */
+	background-position: center;
+}
+.nav .search{
+    background-size: 18px 88px;
+    background-repeat: no-repeat;
+    background-image: url(../img/search.svg);
+    background-position: center 0px;
+	height: 44px;
+}
+.nav .buy{
+	background-image: url(../img/buy.svg);
+	height: 44px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.togglebtn{
+	height: 44px;
+	/* display: flex; */
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	/* display: none; */
+	align-items: center;
+	position: relative;
+	
+}
+.togglebtn .line{
+	width: 17px;
+	height: 1px;
+	margin: 4px;
+	background-color: #FFFFFF;
+	/* display: none; */
+	transition: all .5s;
+	/* 设置旋转的中心点 */
+	transform-origin: left center; 	
+}
+.togglebtn .line:nth-child(1){
+	position: absolute;
+	left: calc(50% - 9px);
+	top:14px;
+}
+.togglebtn .line:nth-child(2){
+	position: absolute;
+	left: calc(50% - 9px);
+	top:26px;
+}
+.navpage{
+	display: flex;
+	width: 100vw;
+	height: 0vh;
+	transition: all 0.8s;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: #000;
+}
+.navpage .navMain{
+	width: 100vw;
+}
+
+/* 设定小于768像素时的样式 */
+@media only screen and (max-width:768px){
+	.togglebtn{
+		display: flex;
+		z-index: 100;
+		position: relative;
+	}
+	.nav .logo{
+		z-index: 100;
+		position: relative;
+	}
+	.togglebtn .line{
+		display: block;
+	}
+	.nav .text,.nav .search{
+		display: none;
+	}
+	.nav{
+		justify-content: space-between;
+	}
+	.nav a,.nav label{
+		width: 50px;
+	}
+	.nav .togglebtn{
+		order: 1;
+	}
+	.nav .logo{
+		order: 2;
+	}
+	.nav .buy{
+		order: 3;
+	}
+	
+	#choose:checked~.togglebtn .line:nth-child(1){
+		transform:rotate(45deg);
+	}
+	#choose:checked~.togglebtn .line:nth-child(2){
+		transform:rotate(-45deg);
+	}
+	
+	/* 设定复选框为选中状态时，导航页面显示 */
+	#choose:checked~.navpage{
+		display: flex;
+		/* 
+		 vw:viewport weight:100  ==100%viewport width
+		 vh:viewport height:100  ==100%viewport height
+		 */
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		top: 0;
+		background-color: #000;
+		color: #fff;
+		flex-direction: column;
+		padding-top: 54px;
+	}
+	
+	.searchInput{
+		margin: 0 28px 20px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 36px;
+		border-radius: 4px;
+		color: #ccc;
+		background-color: rgba(45,45,45,0.98);
+	}
+	.searchInput .icon{
+		width: 32px;
+		height: 36px;
+		background-image: url(../img/search1.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 18px 88px;
+	}
+	.searchInput input{
+		flex: 1;
+		margin: 0 10px;
+		height: 100%;
+		background: transparent;
+		border: none;
+		outline: none;
+		color: #fff;
+	}
+	hr{
+		border-color:#333;
+	}
+	.navList{
+		margin: 0 38px;
+		display: flex;
+		flex-direction: column;
+	}
+	.navList a{
+		width: 100%;
+		height: 44px;
+		color: #fff;
+		text-align: left;
+		border-bottom: 1px solid #333;
+		line-height: 44px;
+	}
+	.navList a:last-child{
+		border-bottom: none;
+	}
